@@ -69,7 +69,7 @@ app.get("/players/:playerId/", async (request, response) => {
   response.send(player);
 });
 
-//Update Player Details
+//Update Player Details API
 app.put("/players/:playerId/", async (request, response) => {
   const { playerId } = request.params;
   const playerDetails = request.body;
@@ -88,7 +88,7 @@ app.put("/players/:playerId/", async (request, response) => {
   response.send(`Player Details Updated`);
 });
 
-//Delete Player
+//Delete Player API
 app.delete("/players/:playerId/", async (request, response) => {
   const { playerId } = request.params;
   const deletePlayerQuery = `
